@@ -1,0 +1,58 @@
+<style>
+.rond1{
+border-radius:50%;
+width:80px;
+height:80px;
+background: linear-gradient(#F16529, #E44D26);
+box-shadow: 0px 1px 4px #aaa, inset 0px 2px 3px #fff;
+border:none;
+outline:none;
+font: 18px Tahoma bold;
+color: #ffffff;
+text-shadow: 1px 1px 1px lighgrey;
+margin:5px;
+}
+
+
+</style>
+<body>
+<div class="bradcam_area breadcam_bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="bradcam_text text-center">
+                    <h3>Lists of animals</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="testmonial_area">
+    <div class="container">
+      
+        <a class="s-menu" routerLink="/ajoutanimal" routerLinkActive="active" class="boxed-btn3"  >add animal</a>
+       
+        <div class="deposite-table" style="text-align: center;padding-left:400px;">
+            <table style="text-align: center; padding-left:7000px;">
+                <tr>
+                    <th><h2>Description</h2></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <tr *ngFor="let Animal of animals | async">
+                    
+                    <td>{{Animal.description}}</td>
+                    <td> 
+                        <button class="s-menu"
+                            (click)="updateAnimal(animal.id_animal)" class="rond1">modifier</button>
+                    </td>
+                             <td><button class="s-menu"
+                        (click)="deleteAnimall(animal.id_animal)" class="rond1">Supprimer</button>
+                    </td>
+               </tr>
+         
+            </table>
+        </div>
+        </div>
+ </div>
+</body>

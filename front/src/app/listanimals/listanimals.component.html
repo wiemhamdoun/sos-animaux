@@ -1,0 +1,34 @@
+<div class="bradcam_area breadcam_bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="bradcam_text text-center">
+                    <h3>Lists of animals</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="testmonial_area">
+    <div class="container">
+        <br>
+        <a class="s-menu" routerLink="/ajoutanimal" routerLinkActive="active" >add animal</a>
+        <br>
+        <div class="deposite-table">
+            <table>
+                <tr>
+                    <th></th>
+                    <th>Description</th>
+                </tr>
+              
+                <tr *ngFor="let Animal of animals | async">
+                    <td>{{Animal.description}}</td>
+                    <td> 
+                        <button class="s-menu"
+                            (click)="updateAnimal(animal.id_animal)">modifier</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        </div>
+ </div>

@@ -1,0 +1,29 @@
+<div class="bradcam_area breadcam_bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="bradcam_text text-center">
+                    <h3>Add animal</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-lg-8"  >
+    <form class="form-contact contact_form"  (ngSubmit)="onSubmit()" novalidate="novalidate" >
+      
+          <br>
+          <div class="col-sm-6" >
+            <br>
+            <div class="form-group">
+
+                <input class="form-control valid" name="description"  [(ngModel)]="animal.description" type="text" >
+            </div>
+        </div>
+         
+      
+        <div class="form-group mt-3">
+            <button type="submit" class="button button-contactForm boxed-btn" >Add</button>
+        </div>
+    </form>
+</div>
